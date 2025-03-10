@@ -1,10 +1,10 @@
-import mysql.connector
+import mysql.connector # type: ignore
 
 # Establish a connection to the MySQL server
 conn = mysql.connector.connect(
     host='localhost',         # or use the IP address where the MySQL server is running
     user='root',              # your MySQL username
-    password='Ritujaa@2006',  # your MySQL password
+    password='Nandy@2812',  # your MySQL password
     database='project'        # the database you want to connect to
 )
 
@@ -23,7 +23,7 @@ for row in cursor.fetchall():
     print(row)
 
 # Insert a new record into the Login1 table
-cursor.execute("INSERT INTO Login1(username, pass) VALUES (%s, %s)", ("Ritujaa", "jaswant"))
+cursor.execute("INSERT INTO Login1(username, pass) VALUES (%s, %s)", ("Nandy", "nan@123")) # Use %s as a placeholder for the values
 conn.commit()  # Don't forget to commit the transaction!
 
 # Fetch and print the updated table (after the INSERT)

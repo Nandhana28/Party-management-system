@@ -9,7 +9,7 @@ app.use(cors());  // Enable cross-origin resource sharing
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'Ritujaa@2006',
+  password: 'Nandy@2812',
   database: 'project',
 });
 
