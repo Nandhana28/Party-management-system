@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();  // useNavigate hook to navigate after login
 
   const handleLogin = async () => {
     try {
@@ -14,8 +16,8 @@ const Login = () => {
       });
 
       if (response.status === 200) {
-        alert(response.data.message);
-        // You can redirect the user or store the user data in state here
+        alert(response.data.message); // Optional: display message from server
+        navigate("/today-events"); // Redirect to the Today Events page after successful login
       }
     } catch (err) {
       setError(err.response ? err.response.data.message : 'Server error');
