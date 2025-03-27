@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../Styles/createAccount.css"; // Include CSS
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
@@ -38,28 +39,79 @@ const CreateAccount = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2>Create Account</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <input type="text" name="firstName" placeholder="First Name" onChange={handleChange} required />
-        <input type="text" name="middleName" placeholder="Middle Name (Optional)" onChange={handleChange} />
-        <input type="text" name="lastName" placeholder="Last Name" onChange={handleChange} required />
-        <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-        <input type="text" name="phoneNumber" placeholder="Phone Number" onChange={handleChange} required />
-        <input type="date" name="dob" onChange={handleChange} required />
-        <input type="number" name="age" placeholder="Age" onChange={handleChange} />
-        <button type="submit" style={styles.button}>Create Account</button>
-      </form>
+    <div className="create-account-container">
+      <div className="form-container">
+        <h2>Create Account</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="input-row">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="middleName"
+              placeholder="Middle Name (Optional)"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-row">
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="date"
+              name="dob"
+              onChange={handleChange}
+              required
+            />
+            
+          </div>
+          <div className="input-row">
+          <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-row">
+          <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="phoneNumber"
+              placeholder="Phone Number"
+              onChange={handleChange}
+              required
+            />
+            
+          </div>
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
   );
 };
 
-const styles = {
-  container: { textAlign: "center", padding: "50px", maxWidth: "400px", margin: "auto" },
-  form: { display: "flex", flexDirection: "column", gap: "10px" },
-  button: { padding: "10px", fontSize: "16px", background: "#28a745", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }
-};
- 
 export default CreateAccount;
