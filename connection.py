@@ -4,15 +4,15 @@ import mysql.connector # type: ignore
 conn = mysql.connector.connect(
     host='localhost',         # or use the IP address where the MySQL server is running
     user='root',              # your MySQL username
-    password='Nandy@2812',  # your MySQL password
+    password='######',  # your MySQL password
     database='project'        # the database you want to connect to
 )
 
 # Check if the connection is successful
 if conn.is_connected():
-    print("✅ Successfully connected to the database")
+    print("Successfully connected to the database")
 else:
-    print("❌ Failed to connect")
+    print("Failed to connect")
 
 # Create a cursor object
 cursor = conn.cursor()
