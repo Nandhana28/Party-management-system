@@ -1,0 +1,116 @@
+/* Create Account Container */
+.create-account-container {
+    background: url('../client.jpg') no-repeat center center/cover; /* Background image */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Form Container */
+  .form-container {
+    background: rgba(255, 255, 255, 0.85); /* Mild transparent background */
+    padding: 30px;
+    border-radius: 42px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Form Heading */
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* Form Fields */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input Rows */
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px; /* Space between left and right fields */
+    width: 100%;
+  }
+  
+  .input-row input {
+    flex: 1;
+    padding: 9px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: -1px; /* Reduced spacing between rows */
+
+  }
+  
+  .input-row input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  
+  
+  /* Button Styles */
+  button {
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Input Placeholder */
+  input::placeholder {
+    color: #888;
+  }
+  
+  /* Error and Success Message */
+  .error, .success {
+    font-size: 14px;
+    color: red;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .input-row {
+      flex-direction: column; /* Stack inputs vertically on smaller screens */
+    }
+  
+    .input-row input {
+      margin-bottom: 1px; /* Add some margin to separate vertically stacked inputs */
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  }
+  

@@ -1,0 +1,136 @@
+/* Main container styling */
+.main-container {
+    display: flex;
+    height: 100vh;
+    background-color: #06060676;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Sidebar styling */
+  .sidebar-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Event section styling */
+  .content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Event sections */
+  .event-section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Event container */
+  .event-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  /* Individual event card */
+  .event {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .event h3 {
+    font-size: 18px;
+    color: #0073e6;
+    margin-bottom: 8px;
+  }
+  
+  .event p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Specific event type styling */
+  .today-event {
+    border-left: 5px solid #28a745; /* Green */
+  }
+  
+  .upcoming-event {
+    border-left: 5px solid #ff9800; /* Orange */
+  }
+  
+  .past-event {
+    border-left: 5px solid #d9534f; /* Red */
+  }
+  
+  /* No events message */
+  .no-events {
+    color: #888;
+    font-style: italic;
+  }
+  
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+  }
+  
+  .date-input {
+    width: auto;
+    min-width: 120px;
+  }
+  
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    .sidebar-container {
+      width: 100%;
+      box-shadow: none;
+      padding-bottom: 10px;
+    }
+  
+    .event-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .event {
+      width: 90%;
+    }
+  }
+  

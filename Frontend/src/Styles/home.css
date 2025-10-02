@@ -1,0 +1,308 @@
+/* Hide Scrollbar */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.home-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 3rem;
+    background: linear-gradient(to bottom, rgba(9, 88, 167, 0.893), transparent);
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: auto; /* Adjust size */
+    width: 70px;
+    margin-right: 0px;
+}
+
+.navbar h2 {
+    margin-left: 50px;
+    font-size: 20px;
+    color: white;
+    align-items: left;
+}
+
+/* Hide navbar when scrolling down */
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Adjust spacing between links */
+    margin-right: 5rem; /* Move links left (reduce if needed) */
+}
+
+.nav-links a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.view-events-btn {
+    background: #4668a7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.view-events-btn:hover {
+    background: #3b4aa9;
+}
+
+/* Event Section */
+.event-page {
+    display: flex;
+    flex-wrap: wrap; /* Allow multiple rows */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #18325cfb;
+    padding: 60px 50px;
+    overflow: visible;
+}
+
+
+/* Event Cards */
+.event-card {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 70vh; /* Adjusted height */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.event-card:hover {
+    transform: scale(1.03); /* Slightly enlarge the card */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Add depth */
+}
+
+.event-card.left {
+    flex-direction: row; /* Image on left */
+}
+
+.event-card.right {
+    flex-direction: row-reverse; /* Image on right */
+}
+
+/* Event Images */
+.event-image {
+    width: 50%; /* Half of the card */
+    height: 100%; /* Full height of the card */
+    object-fit: cover; /* Crop the image */
+    transition: transform 0.3s ease;
+}
+
+/* Image Zoom on Hover */
+.event-card:hover .event-image {
+    transform: scale(1.1); /* Zoom in the image */
+}
+
+/* Event Description */
+.event-description {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.event-description h3 {
+    font-size: 3rem; /* Large event title */
+    font-weight: bold;
+    color: #1b263b; /* Customize color */
+    margin-bottom: 10px;
+}
+
+.event-description p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* Spacing between lines */
+    color: #415a77; /* Choose a readable color */
+}
+
+/* Feedback section */
+.feedback-title-section {
+    display: flex;
+    flex-direction: column; /* Stack content */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Style the title */
+.feedback-title-section h1 {
+    font-size: 32px;
+    color: #1e3557;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.feedback-card {
+    flex: 0 1 300px; /* Ensure equal card width */
+    background: rgba(41, 69, 153, 0.313);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    color: #1e3557;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    min-height: 250px;
+    max-width: 300px;
+}
+
+/* Optional: Hover effect */
+.feedback-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: row; /* Arrange cards in a row */
+    justify-content: center; /* Center cards */
+    align-items: stretch; /* Make cards equal height */
+    gap: 30px; /* Space between cards */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    width: 100%;
+    padding: 20px 0;
+}
+
+
+.feedback-card h4 {
+    color: #18325cfb;
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.feedback-card p {
+    font-style: italic;
+    gap: 20px;
+    line-height: 40px;
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: left;
+    color: #18325cfb;
+}
+
+.rating {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.about-contact-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 10%;
+    background: rgb(3, 60, 97);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(242, 240, 240, 0.838);
+    gap: 40px;
+    overflow: hidden; /* Ensures the wave doesn't overflow */
+}
+
+.about-content, .contact-content {
+    flex: 1;
+}
+
+.about-content h2, .contact-content h2 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: rgb(167, 199, 248);
+    margin-left: 0px;
+    margin-right: 130px;
+    line-height: 1.6;
+}
+
+.contact-content {
+    text-align: left;
+}
+
+.contact-content .contact-info p {
+    font-size: 1.1rem;
+    color:  rgb(167, 199, 248);
+    margin: 22px 0;
+}
